@@ -13,7 +13,6 @@ api.put('/message', function(request, response) {
     else
       response.json('Two errors detected, the message needs to be resented');
   }
-  response.json('Message received without errors');
 });
 
 api.listen(3000, function(){
@@ -21,7 +20,7 @@ api.listen(3000, function(){
 });
 
 function distortBit(bits){
-  var errors = Math.floor(Math.random() * 2) + 1;
+  var errors = Math.floor(Math.random() * 3);
   for(let i=0;i<errors;i++) {
     var index = Math.floor(Math.random() * bits.length);
     bits[index] = (bits[index]+1) % 2;

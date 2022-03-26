@@ -5,7 +5,7 @@ function decode(bits) {
 		var z1=parity(bits[1]+bits[3]+bits[5]+bits[7]);
 		
 		var errorPosition=z1*1+z2*2+z4*4;
-		console.log("\n Errror detected at bit: " + errorPosition + "\n");
+		console.log("\n Errror detected at bit: " + (errorPosition + 1) + "\n");
 	}
 	else
 	{
@@ -15,7 +15,7 @@ function decode(bits) {
 		var z1=parity(bits[1]+bits[3]+bits[5]+bits[7]+bits[9]+bits[11]);
 		
 		var errorPosition=z1*1+z2*2+z4*4+z8*8;
-		console.log("\n Errror detected at bit: " + errorPosition + "\n");
+		console.log("\n Errror detected at bit: " + (errorPosition + 1) + "\n");
 	}
 	
 	var parityBit=bits[0];
