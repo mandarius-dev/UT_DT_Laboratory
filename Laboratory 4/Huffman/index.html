@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<meta content=" text/html;charset=utf -8" http-equiv="Content-Type">
+	<meta content ="utf-8"http-equiv="encoding">
+
+	<title>Huffman</title>
+
+	<!-- load the style.css -->	
+	<link rel="stylesheet" href="style.css">
+	<!-- load the d3.js library -->	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+ </head >
+ 
+ <body>
+	<h1>Huffman conpression</h1>
+
+	<input id="message" class="message" v-model="message" placeholder="String pentru compresie">
+	<button onclick="encode()">Encode</button>
+
+	<div class="output-empty" v-if="message == ''">Arborele de compresie:</div>
+
+	<script src="arbore.js"></script>
+	
+    <div class="output-empty" v-if="message == ''">Coduri noi: </div> 
+	<div>
+		<table id="tabel_cod">
+
+		</table>
+	</div>
+
+	<div id = "compression_rate">
+	</div>
+ </body>
+</html>
